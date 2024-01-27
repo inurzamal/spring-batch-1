@@ -36,7 +36,7 @@ public class DemoApplication {
 	public CommandLineRunner demoJobRunner() {
 		return args -> {
 			//jobLauncher.run(job, new JobParameters());
-			JobParameters jobParameters = new JobParametersBuilder().addLong("startAt", System.currentTimeMillis()).toJobParameters();
+			JobParameters jobParameters = new JobParametersBuilder().addLong("startAt:", System.currentTimeMillis()).toJobParameters();
 			jobLauncher.run(job, jobParameters);
 		};
 	}
